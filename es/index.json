@@ -1,0 +1,148 @@
+[
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/",
+	"title": "Cómo empezar",
+	"tags": [],
+	"description": "",
+	"content": " Bienvenido a nuestra documentacion! ng-inline-editor es una biblioteca desarrollada usando Angular 4 (version 4.x.x). Éste componente te permite crear elementos editables. Esta técnica también es conocida como click-to-edit o edit-in-place. Este componente está basado en ideas de angular-xeditable, el cual está desarrollado en AngularJS.\nVersion La versión de Angular 4 es estable. Por lo tanto, si tienes algún problema usando esta biblioteca, asegurate de que tu versión es compatible. La version la cual está siendo utilizada para desarrollar esta biblioteca es angular4 4.4.4.\nDependencias No depende de ninguna biblioteca excepto Angular4.\nPara los temas necesitas incluir Twitter Bootstrap y FontAwesome en tu proyecto.\n"
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": " ngx-inline-editor \n  "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/features/",
+	"title": "Features",
+	"tags": [],
+	"description": "",
+	"content": "Estas son las características que dispone actualmente el componente:\ntext textarea select checkbox radio date time datetime html5 inputs pattern number range  typeahead ui-select formularios complejos filas editables columnas editables tablas editables temas  "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/setup/",
+	"title": "Instalación",
+	"tags": [],
+	"description": "",
+	"content": " Instalación Una forma recomendable de instalar ngx-inline-editor es con npm, usando el siguiente comando:\nnpm i @qontu/ngx-inline-editor --save\nConfigurar estilos Puedes tanto incluir tus propios estilos como incluir el tema básico. Para utilizar el básico con angular-cli, puedes importarlo al fichero src/styles.css con el siguiente comando:\n@import '~@qontu/ngx-inline-editor/themes/bootstrap.css'\nUsamos ciertas clases de Twitter Bootstrap y FontAwesome para representar los iconos de los botones. Puedes tanto incluirlos o customizar los tuyos propios.\n "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/first-example/",
+	"title": "Primer ejemplo",
+	"tags": [],
+	"description": "",
+	"content": "import { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{sampleText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;text\u0026quot; [(ngModel)]=\u0026quot;sampleText\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt;` }) export class AppComponent { sampleText = 'sample'; }  "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/",
+	"title": "Uso",
+	"tags": [],
+	"description": "",
+	"content": " Angular 4++ Tienes que importar InlineEditorModule y FormsModule en el módulo de tu aplicación:\n// Angular imports import { InlineEditorModule } from '@qontu/ngx-inline-editor'; import { FormsModule } from '@angular/forms'; @NgModule({ declarations: [ AppComponent ], imports: [ BrowserModule, InlineEditorModule, FormsModule, ], providers: [], bootstrap: [AppComponent] }) export class AppModule { }  "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/",
+	"title": "¡Bienvenido a nuestra API!",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/common-attributes/",
+	"title": "Atributos comunes",
+	"tags": [],
+	"description": "",
+	"content": "Los siguientes atributos son comunes para todos los tipos de inputs:\n type: Especifica el tipo de \u0026lt;input\u0026gt; a mostrar y puede tener los siguientes valores:\n \u0026lsquo;text\u0026rsquo; \u0026lsquo;number\u0026rsquo; \u0026lsquo;select\u0026rsquo; \u0026lsquo;range\u0026rsquo; \u0026lsquo;textarea\u0026rsquo; \u0026lsquo;date\u0026rsquo; \u0026lsquo;time\u0026rsquo; \u0026lsquo;datetime\u0026rsquo;  [name]: string. Nombre del elemento \u0026lt;input\u0026gt;. Por defecto ''.\n [size]: number. Anchura del elemento \u0026lt;input\u0026gt;. Por defecto 8.\n [placeholder]: string. Placeholder del elemento\u0026lt;input\u0026gt;. Por defecto 'placeholder'.\n [empty]: string. El texto que se muestra cuando el elemento \u0026lt;input\u0026gt; está vacio. Por defecto 'empty'.\n [hideButtons]: boolean. Si es true, los botones de aceptar y cancelar no aparecerán. Por defecto false.\n [required]: boolean. Si es true y el texto del elemento \u0026lt;input\u0026gt;, lanza un error. Por defecto false.\n [disabled]: boolean. Si es true, se vuelve inusable y no se le puede hacer click. Por defecto false.\n [onlyValue]: boolean. Si es false, te envía metadatos del elemento (Ej: qué evento fue lanzado). Si es true, sólo te manda su valor. Por defecto true.\n [saveOnChange] : boolean. El elemento \u0026lt;input\u0026gt; es guardado cuando su valor cambia. Por defecto false.\n [saveOnBlur] : boolean. El elemento \u0026lt;input\u0026gt; es guardado cuando pierde el focus. Por defecto false.\n [saveOnEnter] : boolean. El elemento \u0026lt;input\u0026gt; es guardado cuando se presiona la tecla Enter. Por defecto true.\n [cancelOnEscape] : boolean. El elemento  pierde el focus cuando la tecla Escape es presionada. Por defecto true.\n [editOnClick] : boolean. El elemento \u0026lt;input\u0026gt; gana el foco cuando se le hace click. Por defecto true.\n   Example:\nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;date\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-text/",
+	"title": "Input text",
+	"tags": [],
+	"description": "",
+	"content": " type: \u0026lsquo;text\u0026rsquo;.\n [pattern]: string | RegExp. Define una expresión regular para el valor del elemento \u0026lt;input\u0026gt;. Si éste no cumple la expresión regular, su valor no será cambiado. Por defecto ''.\n  \nPequeño ejemplo:\nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;text\u0026quot; pattern=\u0026quot;\\w*\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; size=\u0026quot;20\u0026quot; placeholder=\u0026quot;This is my placeholder!\u0026quot; empty=\u0026quot;Be care! You're leaving this input empty.\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-select/",
+	"title": "Input select",
+	"tags": [],
+	"description": "",
+	"content": " type: \u0026lsquo;select\u0026rsquo;.\n [options]: Object\n text: string value: string data: Object[]   \nExample:\nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;select\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; [options]= \u0026quot;{ text: 'textOption', value: 'valueOption', data: [ { valueOption: 'value', textOption: 'textOption' }, { valueOption: 'secondValue', textOption: 'secondText' } ] }\u0026quot; placeholder=\u0026quot;This is my placeholder!\u0026quot; empty=\u0026quot;Be care! You're leaving this input empty.\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-number/",
+	"title": "Input number",
+	"tags": [],
+	"description": "",
+	"content": " type: \u0026lsquo;number\u0026rsquo;.\n [min]: number. \u0026lt;input\u0026gt; element\u0026rsquo;s minimum value. Default 0.\n [max]: number. \u0026lt;input\u0026gt; element\u0026rsquo;s maximum value. Default Infinity.\n  \nExample:\nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;number\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; min=\u0026quot;20\u0026quot; max=\u0026quot;120\u0026quot; placeholder=\u0026quot;This is my placeholder!\u0026quot; empty=\u0026quot;Be care! You're leaving this input empty.\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input.number/",
+	"title": "Input number",
+	"tags": [],
+	"description": "",
+	"content": " type: \u0026lsquo;number\u0026rsquo;.\n [min]: number. Valor mínimo del elemento \u0026lt;input\u0026gt;. Por defecto 0.\n [max]: number. Valor máximo del elemento \u0026lt;input\u0026gt;. Por defecto Infinity.\n  \nExample:\nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;number\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; min=\u0026quot;20\u0026quot; max=\u0026quot;120\u0026quot; placeholder=\u0026quot;This is my placeholder!\u0026quot; empty=\u0026quot;Be care! You're leaving this input empty.\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-textarea/",
+	"title": "Input textarea",
+	"tags": [],
+	"description": "",
+	"content": " type: \u0026lsquo;textarea\u0026rsquo;.\n [rows]: number. Altura del text area. Por defecto 4.\n [cols]: number. Anchura del text area. Por defecto 10.\n [pattern]: string | RegExp. Define una expresión regular para el valor del elemento \u0026lt;input\u0026gt;. Si éste no cumple la expresión regular, su valor no será cambiado. Por defecto ''.\n  \nimport { Component } from '@angular/core'; @Component({ selector: 'app-root', template: ` \u0026lt;h1\u0026gt; {{editableText}} \u0026lt;/h1\u0026gt; \u0026lt;div\u0026gt; \u0026lt;inline-editor type=\u0026quot;textarea\u0026quot; [(ngModel)]=\u0026quot;editableText\u0026quot; (onSave)=\u0026quot;saveEditable($event)\u0026quot; (onBlur)=\u0026quot;saveEditable($event)\u0026quot; rows=\u0026quot;14\u0026quot; cols=\u0026quot;15\u0026quot; placeholder=\u0026quot;This is my placeholder!\u0026quot; empty=\u0026quot;Be care! You're leaving this input empty.\u0026quot; [onlyValue]=\u0026quot;false\u0026quot; [saveOnBlur]=\u0026quot;true\u0026quot;\u0026gt; \u0026lt;/inline-editor\u0026gt; \u0026lt;/div\u0026gt; ` }) export class AppComponent { editableText = 'myText'; saveEditable(event) { console.log(event); } } "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/style/",
+	"title": "Estilos/temas",
+	"tags": [],
+	"description": "",
+	"content": "Este componente tiene las siguientes reglas básicas en dist/themes/bootstrap.css:\na.c-inline-editor { text-decoration: none; color: #428bca; border-bottom: dashed 1px #428bca; cursor: pointer; line-height: 2; margin-right: 5px; margin-left: 5px; } .c-inline-editor.editable-empty, .c-inline-editor.editable-empty:hover, .c-inline-editor.editable-empty:focus, .c-inline-editor.a.editable-empty, .c-inline-editor.a.editable-empty:hover, .c-inline-editor.a.editable-empty:focus { font-style: italic; color: #DD1144; text-decoration: none; } .c-inline-editor.inlineEditForm { display: inline-block; white-space: nowrap; margin: 0; } #inlineEditWrapper { display: inline-block; } .c-inline-editor.inlineEditForm input, .c-inline-editor.select { width: auto; display: inline; } .c-inline-editor.inline-editor-button-group { display: inline-block; } .c-inline-editor.editInvalid { color: #a94442; margin-bottom: 0; } .c-inline-editor.error { border-color: #a94442; } [hidden].c-inline-editor { display: none; }  "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/troubleshooting/",
+	"title": "Troubleshooting",
+	"tags": [],
+	"description": "",
+	"content": "Por favor usa estas guías cuando reportes bugs o peticiones de características:\n Usa GitHub Issues para reportar bugs y nuevas características (no nuestro mail). Por favor siempre divide el error en pasos para reproducirlo. De esta forma nos es más fácil centrarnos en el bug, no intentándolo reproducirlo.  Gracias!\n"
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/development/",
+	"title": "Desarrolladores",
+	"tags": [],
+	"description": "",
+	"content": "Este componente no usa dependencias de terceros por lo que es ultra ligero 😉 Como herramienta para automatizar procesos usamos gulp y para crear los bundles rollup.\nSi quieres colaborar en el desarrollo te indicaré los pasos que usamos:\n Para compilar el código npm run build\n Esto creará una carpeta dist/ con el código transpilado y bundleado.  Para iniciar el modo debug: npm run debug\n Esto copiará los ficheros src/**/*.ts al directorio dist/ y permitirá que puedas usar directamente los ficheros typescript, esto aporta una gran facilidad a la hora de debuggear, ya que no necesitas los .map. Una vez iniciado, ejecuta el comando yarn link Y luego en tu proyecto de prueba yarn link @qontu/ngx-inline-editor   "
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/authors/",
+	"title": "Autores",
+	"tags": [],
+	"description": "",
+	"content": "Carlos Caballero\nAntonio Villena\n"
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/license/",
+	"title": "Licencia",
+	"tags": [],
+	"description": "",
+	"content": "MIT License (See the LICENSE file for the full text).\n"
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/_header/",
+	"title": "Header",
+	"tags": [],
+	"description": "",
+	"content": "Doc. del Inline editor\n"
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://xxxtonixxx.github.io/ngx-inline-editor/es/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

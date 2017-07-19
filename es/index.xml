@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Inline editor doc</title>
+    <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/</link>
+    <description>Recent content in Home on Inline editor doc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <copyright>Todos los derechos reservados</copyright>
+    <lastBuildDate>Sat, 17 Jun 2017 20:55:11 +0200</lastBuildDate>
+    
+	<atom:link href="https://xxxtonixxx.github.io/ngx-inline-editor/es/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Features</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/features/</guid>
+      <description>Estas son las características que dispone actualmente el componente:
+text textarea select checkbox radio date time datetime html5 inputs pattern number range  typeahead ui-select formularios complejos filas editables columnas editables tablas editables temas  </description>
+    </item>
+    
+    <item>
+      <title>Instalación</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/setup/</link>
+      <pubDate>Sat, 17 Jun 2017 20:55:11 +0200</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/getting-started/setup/</guid>
+      <description>Instalación Una forma recomendable de instalar ngx-inline-editor es con npm, usando el siguiente comando:
+npm i @qontu/ngx-inline-editor --save
+Configurar estilos Puedes tanto incluir tus propios estilos como incluir el tema básico. Para utilizar el básico con angular-cli, puedes importarlo al fichero src/styles.css con el siguiente comando:
+@import &#39;~@qontu/ngx-inline-editor/themes/bootstrap.css&#39;
+Usamos ciertas clases de Twitter Bootstrap y FontAwesome para representar los iconos de los botones. Puedes tanto incluirlos o customizar los tuyos propios.</description>
+    </item>
+    
+    <item>
+      <title>Primer ejemplo</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/first-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/first-example/</guid>
+      <description>import { Component } from &#39;@angular/core&#39;; @Component({ selector: &#39;app-root&#39;, template: ` &amp;lt;h1&amp;gt; {{sampleText}} &amp;lt;/h1&amp;gt; &amp;lt;div&amp;gt; &amp;lt;inline-editor type=&amp;quot;text&amp;quot; [(ngModel)]=&amp;quot;sampleText&amp;quot;&amp;gt; &amp;lt;/inline-editor&amp;gt; &amp;lt;/div&amp;gt;` }) export class AppComponent { sampleText = &#39;sample&#39;; }  </description>
+    </item>
+    
+    <item>
+      <title>Atributos comunes</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/common-attributes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/common-attributes/</guid>
+      <description>&lt;p&gt;Los siguientes atributos son comunes para todos los tipos de inputs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: Especifica el tipo de &amp;lt;input&amp;gt; a mostrar y puede tener los siguientes valores:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;text&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;number&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;select&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;range&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;textarea&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;date&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;time&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;datetime&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;name&lt;/code&gt;]: &lt;code&gt;string&lt;/code&gt;. Nombre del elemento &amp;lt;input&amp;gt;. Por defecto &lt;code&gt;&#39;&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;size&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. Anchura del elemento &amp;lt;input&amp;gt;. Por defecto &lt;code&gt;8&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;placeholder&lt;/code&gt;]: &lt;code&gt;string&lt;/code&gt;. Placeholder del elemento&amp;lt;input&amp;gt;. Por defecto &lt;code&gt;&#39;placeholder&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;empty&lt;/code&gt;]: &lt;code&gt;string&lt;/code&gt;. El texto que se muestra cuando el elemento &amp;lt;input&amp;gt; está vacio. Por defecto &lt;code&gt;&#39;empty&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;hideButtons&lt;/code&gt;]: &lt;code&gt;boolean&lt;/code&gt;. Si es &lt;code&gt;true&lt;/code&gt;, los botones de aceptar y cancelar no aparecerán. Por defecto &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;required&lt;/code&gt;]: &lt;code&gt;boolean&lt;/code&gt;. Si es &lt;code&gt;true&lt;/code&gt; y el texto del elemento &amp;lt;input&amp;gt;, lanza un error. Por defecto &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;disabled&lt;/code&gt;]: &lt;code&gt;boolean&lt;/code&gt;. Si es &lt;code&gt;true&lt;/code&gt;, se vuelve inusable y no se le puede hacer click. Por defecto &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;onlyValue&lt;/code&gt;]: &lt;code&gt;boolean&lt;/code&gt;. Si es &lt;code&gt;false&lt;/code&gt;, te envía metadatos del elemento (Ej: qué evento fue lanzado). Si es &lt;code&gt;true&lt;/code&gt;, sólo te manda su valor. Por defecto &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;saveOnChange&lt;/code&gt;] : &lt;code&gt;boolean&lt;/code&gt;. El elemento &amp;lt;input&amp;gt; es guardado cuando su valor cambia. Por defecto &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;saveOnBlur&lt;/code&gt;] : &lt;code&gt;boolean&lt;/code&gt;. El elemento &amp;lt;input&amp;gt; es guardado cuando pierde el focus. Por defecto &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;saveOnEnter&lt;/code&gt;] : &lt;code&gt;boolean&lt;/code&gt;. El elemento &amp;lt;input&amp;gt; es guardado cuando se presiona la tecla Enter. Por defecto &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;cancelOnEscape&lt;/code&gt;] : &lt;code&gt;boolean&lt;/code&gt;. El elemento &lt;input&gt; pierde el focus cuando la tecla Escape es presionada. Por defecto &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;editOnClick&lt;/code&gt;] : &lt;code&gt;boolean&lt;/code&gt;. El elemento &amp;lt;input&amp;gt; gana el foco cuando se le hace click. Por defecto &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Input text</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-text/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: &amp;lsquo;text&amp;rsquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;pattern&lt;/code&gt;]: &lt;code&gt;string | RegExp&lt;/code&gt;. Define una expresión regular para el valor del elemento &amp;lt;input&amp;gt;. Si éste no cumple la expresión regular, su valor no será cambiado. Por defecto &lt;code&gt;&#39;&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Input select</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-select/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-select/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: &amp;lsquo;select&amp;rsquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;options&lt;/code&gt;]: &lt;code&gt;Object&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;text&lt;/code&gt;: &lt;code&gt;string&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;value&lt;/code&gt;: &lt;code&gt;string&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt;: &lt;code&gt;Object[]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Input number</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-number/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: &amp;lsquo;number&amp;rsquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;min&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. &amp;lt;input&amp;gt; element&amp;rsquo;s minimum value. Default &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;max&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. &amp;lt;input&amp;gt; element&amp;rsquo;s maximum value. Default &lt;code&gt;Infinity&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Input number</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input.number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input.number/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: &amp;lsquo;number&amp;rsquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;min&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. Valor mínimo del elemento &amp;lt;input&amp;gt;. Por defecto &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;max&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. Valor máximo del elemento &amp;lt;input&amp;gt;. Por defecto &lt;code&gt;Infinity&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Input textarea</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-textarea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/usage/api/input-textarea/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;type&lt;/code&gt;: &amp;lsquo;textarea&amp;rsquo;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;rows&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. Altura del text area. Por defecto &lt;code&gt;4&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;cols&lt;/code&gt;]: &lt;code&gt;number&lt;/code&gt;. Anchura del text area. Por defecto &lt;code&gt;10&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[&lt;code&gt;pattern&lt;/code&gt;]: &lt;code&gt;string | RegExp&lt;/code&gt;.  Define una expresión regular para el valor del elemento &amp;lt;input&amp;gt;. Si éste no cumple la expresión regular, su valor no será cambiado. Por defecto &lt;code&gt;&#39;&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Header</title>
+      <link>https://xxxtonixxx.github.io/ngx-inline-editor/es/_header/</link>
+      <pubDate>Sun, 18 Jun 2017 13:58:45 +0200</pubDate>
+      
+      <guid>https://xxxtonixxx.github.io/ngx-inline-editor/es/_header/</guid>
+      <description>Doc. del Inline editor</description>
+    </item>
+    
+  </channel>
+</rss>
